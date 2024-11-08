@@ -9,6 +9,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
@@ -17,27 +21,28 @@
       <div class="container">
         <div class="menu-bar">
           <div class="logo">
-            <img src="./Capture111-removebg-preview.png" alt="" width="150px" />
+            <a href="./index.html" class="logo-link">
+              <h4>
+                <span class="logo-h">H</span><span class="logo-h">H</span>
+              </h4>
+            </a>
           </div>
           <div class="nav-bar">
             <nav>
               <ul>
                 <li>
-                  <a href="./category.html?category=smartphones"
-                    >Smart Phones</a
-                  >
-                </li>
-                <li><a href="./category.html?category=laptops">Laptops</a></li>
-                <li>
-                  <a href="./category.html?category=furniture">Furniture</a>
+                  <a href="./index.html">Home</a>
                 </li>
                 <li>
-                  <a href="./category.html?category=groceries">Groceries</a>
+                  <a href="./category.html">Products</a>
+                </li>
+                <li>
+                  <a href="#footer">Contact</a>
                 </li>
               </ul>
             </nav>
           </div>
-          <div class="seach">
+          <div class="search">
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
@@ -45,9 +50,7 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
+              <button class="btn btn-primary" type="submit">Search</button>
             </form>
           </div>
         </div>
@@ -57,28 +60,95 @@
       <!-- banner -->
     </section>
 
-    <section>
-      <!-- services -->
-    </section>
-
     <section id="hot-sale">
       <!-- hàng bán chạy -->
     </section>
 
-    <section id="danh-cho-name">
-      <!-- dành cho nam -->
-    </section>
-
-    <section id="danh-cho-nu">
-      <!-- dành cho nữ -->
-    </section>
-
+    <footer class="bg-dark text-light pt-5 pb-3" id="footer">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="logo">
+              <a href="./index.html" class="logo-link">
+                <h4>
+                  <span class="logo-h">H</span><span class="logo-h">H</span>
+                </h4>
+              </a>
+            </div>
+            <p>
+              Chúng tôi cung cấp các sản phẩm chất lượng với dịch vụ tốt nhất.
+              Hãy liên hệ để biết thêm chi tiết!
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="text-uppercase fw-bold">Liên kết nhanh</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="./index.html" class="text-light text-decoration-none"
+                  >Trang chủ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./category.html"
+                  class="text-light text-decoration-none"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li>
+                <a href="#footer" class="text-light text-decoration-none"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="text-uppercase fw-bold">Theo dõi chúng tôi</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  ><i class="fab fa-facebook-f me-2"></i> Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  ><i class="fab fa-twitter me-2"></i> Twitter</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  ><i class="fab fa-instagram me-2"></i> Instagram</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  ><i class="fab fa-linkedin-in me-2"></i> LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="text-uppercase fw-bold">Thông tin liên hệ</h5>
+            <ul class="list-unstyled">
+              <li class="text-light">Email: hhhoangthanhhuy1992@gmail.com</li>
+              <li class="text-light">SĐT: 0337852638</li>
+              <li class="text-light">Địa chỉ: Đồng Mỏ - Chi Lăng - Lạng Sơn</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="bg-light" />
+        <div class="row">
+          <div class="col text-center">
+            <p class="mb-0">&copy; 1992 Công ty TNHH 1 Thành Viên HH</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
     <script type="module" src="./js/slide.js"></script>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/utils.js"></script>

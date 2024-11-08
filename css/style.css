@@ -21,17 +21,14 @@ header ul {
   }
   a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-weight: bold;
     font-size: 20px;
-    padding: 8px 16px;
-    border: 1px solid blue;
     border-radius: 6px;
     transition: all ease-in-out 0.3s;
     text-decoration: none;
     &:hover {
-      background-color: blue;
-      color: white;
+      color: red;
     }
   }
 }
@@ -47,18 +44,83 @@ a {
     color: red;
   }
 }
+.button-search {
+  color: #fff;
+  border: 1px solid red;
+}
 
 button {
   border: none;
 }
 
+header {
+  margin-bottom: 15%;
+}
 .menu-bar {
-  background-color: #a6e19e;
-  border-radius: 6px;
-  color: #fff;
-  padding: 1rem;
+  position: fixed;
+  max-width: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(51, 51, 51, 0.75);
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  align-content: center;
+  padding: 2rem 9%;
+  margin-bottom: 50px;
+}
+
+.nav-bar nav {
+  display: flex;
+  gap: 50px;
+}
+.logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.logo h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tùy chỉnh từng chữ H */
+.logo .logo-h:first-child {
+  color: #ff6347; /* Màu khác cho chữ H đầu tiên, ví dụ: cam */
+  transform: rotate(-5deg); /* Nghiêng nhẹ để tạo điểm nhấn */
+  margin-right: 5px; /* Tạo khoảng cách giữa hai chữ */
+}
+
+.logo .logo-h:last-child {
+  color: #1e90ff; /* Màu khác cho chữ H thứ hai, ví dụ: xanh dương */
+  transform: rotate(5deg); /* Nghiêng ngược lại */
+}
+
+footer {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer h5 {
+  margin-bottom: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer .logo {
+  margin-bottom: 1rem;
 }

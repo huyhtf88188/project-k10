@@ -39,5 +39,14 @@ async function removeById(path, id) {
     console.log(error);
   }
 }
+async function searchProducts(query) {
+  try {
+    const response = await fetch(`${url}/products/search?q=${query}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-export { getAll, getById, create, updateById, removeById };
+export { getAll, getById, create, updateById, removeById, searchProducts };

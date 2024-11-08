@@ -3,8 +3,8 @@ export function getParams(key) {
   const params = new URLSearchParams(window.location.search);
   return params.get(key);
 }
-
 export function render(target, datas) {
+  target.innerHTML = "";
   const containerElement = document.createElement("div");
   containerElement.classList.add("container");
   const row = document.createElement("div");
