@@ -61,7 +61,7 @@ header {
   position: fixed;
   max-width: 100%;
   width: 100%;
-  top: 0;
+  top: 2rem;
   left: 0;
   right: 0;
   background: rgba(51, 51, 51, 0.75);
@@ -71,7 +71,6 @@ header {
   align-items: center;
   align-content: center;
   padding: 0rem 9%;
-  margin-bottom: 50px;
 }
 
 .nav-bar nav {
@@ -127,7 +126,39 @@ footer .logo {
 
 #title {
   text-align: center;
+  color: rgb(91 205 45);
   margin-bottom: 5rem;
+}
+
+.top-bar {
+  white-space: nowrap;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  position: relative;
+}
+.top-bar a {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.marquee-content {
+  display: inline-flex;
+  gap: 50px;
+  position: absolute;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-text {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 #bottom-navbar {
@@ -135,7 +166,7 @@ footer .logo {
   background-color: #343a40;
   color: #fff;
   position: fixed;
-  top: 84px;
+  top: 115px;
   z-index: 1000;
   padding: 10px 0;
 }
