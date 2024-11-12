@@ -132,13 +132,14 @@ footer .logo {
   text-align: center;
   color: rgb(91 205 45);
   margin-bottom: 5rem;
+  padding-top: 8rem;
 }
 
 .top-bar {
   white-space: nowrap;
   background-color: #f8f9fa;
   padding: 10px 0;
-  position: relative;
+  position: fixed;
 }
 .top-bar a {
   color: black;
