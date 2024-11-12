@@ -55,7 +55,7 @@ button {
 }
 
 header {
-  margin-bottom: 15%;
+  margin-bottom: 10%;
 }
 .menu-bar {
   position: fixed;
@@ -123,6 +123,10 @@ footer a {
 footer .logo {
   margin-bottom: 1rem;
 }
+.carousel {
+  position: relative;
+  margin-bottom: 5rem;
+}
 
 #title {
   text-align: center;
@@ -183,6 +187,8 @@ footer .logo {
   text-align: center;
   color: rgb(91 205 45);
   margin-bottom: 2rem;
+  width: 100%;
+  background-color: rgba(127, 255, 212, 0.404);
 }
 
 .homeProducts {

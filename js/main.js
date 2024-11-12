@@ -1,11 +1,13 @@
-import { getAll, getById, searchProducts } from "./services.js";
-import { getParams, render } from "./utils.js";
+import { getAll, searchProducts } from "./services.js";
+import { render } from "./utils.js";
 
 const beautySection = document.getElementById("beauty");
 const fragrancesSection = document.getElementById("fragrances");
 const groceriesSection = document.getElementById("groceries");
-const searchForm = document.querySelector(".search form");
-const searchInput = document.querySelector(".search input");
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("search-input");
+const searchResultsSection = document.getElementById("search-results");
+const searchResultsList = searchResultsSection.querySelector(".product-list");
 
 async function AllProducts() {
   try {
@@ -37,8 +39,15 @@ async function handleSearch(event) {
 
   try {
     const { products } = await searchProducts(query);
-    hotSaleSection.innerHTML = "";
-    render(hotSaleSection, products);
+
+    searchResultsSection.style.display = "block";
+    beautySection.style.display = "none";
+    fragrancesSection.style.display = "none";
+    groceriesSection.style.display = "none";
+
+    searchResultsList.innerHTML = "";
+
+    render(searchResultsList, products);
   } catch (error) {
     console.log(error);
   }

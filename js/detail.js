@@ -2,7 +2,6 @@ import { getById } from "./services.js";
 import { getParams } from "./utils.js";
 
 const detailEle = document.getElementById("detail");
-const reviewProduct = document.getElementById("reviews");
 
 const id = getParams("id");
 console.log(id);
@@ -14,21 +13,26 @@ function renderDetail(target, data) {
   productItem.innerHTML = /*html*/ `
     <div class="col col-md-6">
         <img src="${data.thumbnail}" alt="${data.title}" />
-      </div>
-      <div class="col col-md-6">
-        <h2>${data.title}</h2>
-        <p>Giá: ${data.price}$</p>
-        <p>Còn ${data.stock} sản phẩm</p>
-        <div>
-          <span>Chọn số lượng: </span> <input type="number" min=1 max=${data.stock} value="1"/>
-        </div>
-        <p>Danh mục: ${data.category}</p>
-        <p>Chi tiết: ${data.description}</p>
-        <button class="btn btn-danger">Mua ngay</button>
-        <button class="btn btn-danger">Thêm Vào Giỏ Hàng</button>
         <hr>
         <h4>Đánh giá:</h4>
         <div id="reviews"></div>
+      </div>
+      <div class="col col-md-6">
+        <h2>${data.title}</h2>
+        <p><strong>Giá:</strong> ${data.price}$</p>
+        <p><strong>Tồn Kho</strong> ${data.stock} sản phẩm</p>
+        <div>
+          <strong>Chọn số lượng: </strong> <input type="number" min=1 max=${data.stock} value="1"/>
+        </div>
+        <p><strong>Danh mục:</strong> ${data.category}</p>
+        <div><p><strong>Mô Tả Sản Phẩm :</strong> ${data.description}</p>
+        <p><strong>SKU: </strong>${data.sku}</p>
+        <p><strong>Rating: </strong>${data.rating}*</p>
+        <button class="btn btn-danger">Mua ngay</button>
+        <button class="btn btn-danger">Thêm Vào Giỏ Hàng</button>
+        </div>
+        <hr>
+
     </div>
     `;
   target.appendChild(productItem);
