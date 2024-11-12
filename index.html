@@ -17,7 +17,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
+    <header class="d-flex flex-wrap">
       <div class="container">
         <div class="menu-bar">
           <div class="logo">
@@ -27,6 +27,10 @@
               </h4>
             </a>
           </div>
+          <input type="checkbox" id="navbarToggle" class="navbar-checkbox" />
+          <label for="navbarToggle" class="navbar-toggler d-md-none">
+            <i class="fas fa-bars"></i>
+          </label>
           <div class="nav-bar">
             <nav>
               <ul>
@@ -60,8 +64,25 @@
       <!-- banner -->
     </section>
 
-    <section id="hot-sale">
-      <!-- hàng bán chạy -->
+    <section id="beauty" class="homeProducts container">
+      <a href="./category.html?category=beauty"
+        ><h2 class="title-products">Beauty</h2></a
+      >
+      <div class="product-list"></div>
+    </section>
+
+    <section id="fragrances" class="homeProducts container">
+      <a href="./category.html?category=fragrances"
+        ><h2 class="title-products">Fragrances</h2></a
+      >
+      <div class="product-list"></div>
+    </section>
+
+    <section id="groceries" class="homeProducts container">
+      <a href="./category.html?category=groceries"
+        ><h2 class="title-products">Groceries</h2></a
+      >
+      <div class="product-list"></div>
     </section>
 
     <footer class="bg-dark text-light pt-5 pb-3" id="footer">

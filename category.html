@@ -10,11 +10,15 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./grid.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
+    <header class="d-flex flex-wrap">
       <div class="container">
         <div class="menu-bar">
           <div class="logo">
@@ -27,19 +31,14 @@
           <div class="nav-bar">
             <nav>
               <ul>
-                <li class="me-3">
-                  <a href="./category.html?category=smartphones"
-                    >Smart Phones</a
-                  >
-                </li>
-                <li class="me-3">
-                  <a href="./category.html?category=laptops">Laptops</a>
-                </li>
-                <li class="me-3">
-                  <a href="./category.html?category=furniture">Furniture</a>
+                <li>
+                  <a href="./index.html">Home</a>
                 </li>
                 <li>
-                  <a href="./category.html?category=groceries">Groceries</a>
+                  <a href="./category.html">Products</a>
+                </li>
+                <li>
+                  <a href="#footer">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -58,8 +57,62 @@
         </div>
       </div>
     </header>
+    <nav id="bottom-navbar" class="d-flex justify-content-center">
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="./category.html?category=beauty" class="nav-link">Beauty</a>
+        </li>
+        <li class="nav-item">
+          <a href="./category.html?category=fragrances" class="nav-link"
+            >Fragrances</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="./category.html?category=groceries" class="nav-link"
+            >Groceries</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="./category.html?category=furniture" class="nav-link"
+            >furniture</a
+          >
+        </li>
+        <li>
+          <div class="sorting-menu mb-3">
+            <label for="sort-select"></label>
+            <select
+              id="sort-select"
+              class="form-select"
+              aria-label="Sorting options"
+            >
+              <option value="name-asc">Theo Tên (A - Z)</option>
+              <option value="name-desc">Theo Tên (Z - A)</option>
+              <option value="price-asc">Theo Giá (Thấp đến cao)</option>
+              <option value="price-desc">Theo Giá (Cao đến thấp)</option>
+            </select>
+          </div>
+        </li>
+        <li>
+          <div class="filter-menu mb-3">
+            <label for="price-filter"></label>
+            <select
+              id="price-filter"
+              class="form-select"
+              aria-label="Price range filter"
+            >
+              <option value="all">Tất cả giá</option>
+              <option value="under-100">Dưới $100</option>
+              <option value="100-300">Từ $100 đến $300</option>
+              <option value="300-1000">Từ $300 đến $1000</option>
+              <option value="above-1000">Trên $1000</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
     <div class="container">
-      <h1 id="title"></h1>
+      <h2 id="title"></h2>
 
       <section id="category"></section>
     </div>
