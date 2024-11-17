@@ -211,16 +211,28 @@ footer .logo {
   align-items: center;
   padding: 1rem;
   height: 100%;
+  border-radius: 8px;
 }
-
 .product-card img {
   max-width: 100%;
   margin-bottom: 1rem;
 }
-
 .product-card button {
   margin-top: auto;
   margin-bottom: 10px;
+}
+.product-infor h2 {
+  min-height: 50px;
+  margin-bottom: 10px;
+}
+
+.product-infor p {
+  min-height: 80px;
+  margin-bottom: 10px;
+}
+
+.overProducts {
+  margin-top: 8rem;
 }
 
 .navbar-checkbox {

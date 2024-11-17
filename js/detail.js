@@ -4,7 +4,6 @@ import { getParams } from "./utils.js";
 const detailEle = document.getElementById("detail");
 
 const id = getParams("id");
-console.log(id);
 const product = await getById("products", id);
 console.log(product);
 function renderDetail(target, data) {
@@ -12,8 +11,8 @@ function renderDetail(target, data) {
   productItem.classList.add("row");
   productItem.innerHTML = /*html*/ `
     <div class="col col-md-6">
-        <img src="${data.thumbnail}" alt="${data.title}" />
-        <hr>
+        <img src="${data.thumbnail}" alt="${data.title}" /> 
+        <div class="overProducts"></div>        
         <h4>Đánh giá:</h4>
         <div id="reviews"></div>
       </div>
@@ -22,8 +21,9 @@ function renderDetail(target, data) {
         <p><strong>Giá:</strong> ${data.price}$</p>
         <p><strong>Tồn Kho</strong> ${data.stock} sản phẩm</p>
         <div>
-          <strong>Chọn số lượng: </strong> <input type="number" min=1 max=${data.stock} value="1"/>
+          <strong>Chọn số lượng: </strong> <input type="number" min=1 max=${data.stock} value="1" style="width: 100px; text-align: center;"/>
         </div>
+        <br>
         <p><strong>Danh mục:</strong> ${data.category}</p>
         <div><p><strong>Mô Tả Sản Phẩm :</strong> ${data.description}</p>
         <p><strong>SKU: </strong>${data.sku}</p>
@@ -43,7 +43,7 @@ function renderDetail(target, data) {
 function renderReviews(reviews) {
   const reviewsContainer = document.getElementById("reviews");
 
-  if (!reviews || reviews.length === 0) {
+  if (reviews.length === 0) {
     reviewsContainer.innerHTML = "<p>Chưa có đánh giá nào.</p>";
     return;
   }

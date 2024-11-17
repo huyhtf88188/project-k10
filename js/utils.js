@@ -17,7 +17,7 @@ export function render(target, datas) {
   const containerElement = document.createElement("div");
   containerElement.classList.add("container");
   const row = document.createElement("div");
-  row.classList.add("row");
+  row.classList.add("row", "container");
 
   datas.forEach((item) => {
     const productElement = document.createElement("div");
